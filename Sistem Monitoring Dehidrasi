@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -77,6 +77,22 @@
       memantau kondisi hidrasi tubuh berdasarkan parameter fisiologis
       menggunakan sensor dan mikrokontroler sebagai alat bantu pemantauan.
     </p>
+  </section>
+
+  <section>
+   <h2>Biodata Anggota Tim</h2>
+   <ul>
+     <li>Anisa Prasetya Putri Kartini (121430082)</li>
+     <li>Apri Ayu Lia (122430073)</li>
+     <li>Putri Azzahra (122430123)</li>
+   </ul>
+  </section>
+
+<section>
+    <h2>Dosen Pembimbing</h2>
+    <ul>
+      <li>Retno Maharsi, M.Si</li>
+    </ul>
   </section>
 
   <section>

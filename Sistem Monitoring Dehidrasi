@@ -1,11 +1,10 @@
-<html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <title>Sistem Monitoring Dehidrasi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,33 +12,21 @@
       background-color: #f4f6f8;
       color: #333;
     }
-
     header {
       background-color: #0d6efd;
       color: white;
       padding: 25px;
       text-align: center;
     }
-
     section {
       background: white;
       margin: 20px;
       padding: 20px;
       border-radius: 8px;
     }
-
-    h2 {
-      color: #0d6efd;
-    }
-
-    ul, ol {
-      padding-left: 20px;
-    }
-
-    .status {
-      font-weight: bold;
-    }
-
+    h2 { color: #0d6efd; }
+    ul, ol { padding-left: 20px; }
+    .status { font-weight: bold; }
     button {
       padding: 10px 15px;
       background-color: #198754;
@@ -47,13 +34,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 10px;
     }
-
-    button:hover {
-      background-color: #146c43;
-    }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -65,84 +46,54 @@
 
 <body>
 
-  <header>
-    <h1>Sistem Monitoring Dehidrasi</h1>
-    <p>Pemantauan Kondisi Hidrasi Berbasis Sensor & Mikrokontroler</p>
-  </header>
-
-  <section>
-    <h2>Deskripsi Sistem</h2>
-    <p>
-      Sistem Monitoring Dehidrasi merupakan sistem yang dirancang untuk
-      memantau kondisi hidrasi tubuh berdasarkan parameter fisiologis
-      menggunakan sensor dan mikrokontroler sebagai alat bantu pemantauan.
-    </p>
-  </section>
-
- <section>
-   <h2>Biodata Anggota Tim</h2>
-   <ul>
-     <li>Anisa Prasetya Putri Kartini (121430082)</li>
-     <li>Apri Ayu Lia (122430073)</li>
-     <li>Putri Azzahra (122430123)</li>
-   </ul>
-  </section>
+<header>
+  <h1>Sistem Monitoring Dehidrasi</h1>
+  <p>Pemantauan Kondisi Hidrasi Berbasis Sensor & Mikrokontroler</p>
+</header>
 
 <section>
-    <h2>Dosen Pembimbing</h2>
-    <ul>
-      <li>Retno Maharsi, M.Si</li>
-    </ul>
-  </section>
+  <h2>Deskripsi Sistem</h2>
+  <p>Sistem ini digunakan untuk memantau kondisi hidrasi tubuh berdasarkan parameter fisiologis.</p>
+</section>
 
-  <section>
-    <h2>Komponen Utama</h2>
-    <ul>
-      <li>Arduino Uno / ESP32</li>
-      <li>Sensor Galvanic Skin Response (GSR)</li>
-      <li>Sensor Pendukung</li>
-      <li>Buzzer / Indikator</li>
-    </ul>
-  </section>
+<section>
+  <h2>Biodata Anggota Tim</h2>
+  <ul>
+    <li>Anisa Prasetya Putri Kartini (121430082)</li>
+    <li>Apri Ayu Lia (122430073)</li>
+    <li>Putri Azzahra (122430123)</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Cara Kerja Sistem</h2>
-    <ol>
-      <li>Sensor membaca kondisi kulit dan parameter pendukung</li>
-      <li>Data diproses oleh mikrokontroler</li>
-      <li>Sistem menentukan tingkat dehidrasi</li>
-      <li>Indikator aktif jika terdeteksi dehidrasi</li>
-    </ol>
-  </section>
+<section>
+  <h2>Dosen Pembimbing</h2>
+  <ul>
+    <li>Retno Maharsi, M.Si</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Status Monitoring (Simulasi)</h2>
-    <p>Nilai Konduktivitas Kulit: <span id="gsr">--</span></p>
-    <p>Status Hidrasi: <span id="status" class="status">Menunggu Data</span></p>
-    <button onclick="simulasi()">Simulasikan Data</button>
-  </section>
+<section>
+  <h2>Status Monitoring (Simulasi)</h2>
+  <p>Nilai GSR: <span id="gsr">--</span></p>
+  <p>Status: <span id="status">Menunggu Data</span></p>
+  <button onclick="simulasi()">Simulasikan Data</button>
+</section>
 
-  <footer>
-    <p>© 2025 Sistem Monitoring Dehidrasi</p>
-  </footer>
+<footer>
+  <p>© 2025 Sistem Monitoring Dehidrasi</p>
+</footer>
 
-  <!-- JavaScript -->
-  <script>
-    function simulasi() {
-      let gsr = Math.floor(Math.random() * 600) + 200;
-      document.getElementById("gsr").innerText = gsr;
-
-      let status = "Normal";
-      if (gsr < 350) {
-        status = "Dehidrasi Ringan";
-      }
-      if (gsr < 250) {
-        status = "Dehidrasi Berat";
-      }
-
-      document.getElementById("status").innerText = status;
-    }
-  </script>
+<script>
+function simulasi() {
+  let gsr = Math.floor(Math.random() * 600) + 200;
+  document.getElementById("gsr").innerText = gsr;
+  let status = "Normal";
+  if (gsr < 350) status = "Dehidrasi Ringan";
+  if (gsr < 250) status = "Dehidrasi Berat";
+  document.getElementById("status").innerText = status;
+}
+</script>
 
 </body>
 </html>
+
